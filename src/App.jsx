@@ -1,5 +1,9 @@
+import InsuranceApp from "./components/InsuranceApp";
+
 function App() {
-  return <h1>App</h1>;
+
+  
+  return <InsuranceApp />;
 }
 
 export default App;
