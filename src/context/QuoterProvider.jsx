@@ -16,6 +16,8 @@ const QuoterProvider = ({ children }) => {
   });
 
   const [error, setError] = useState("");
+  const [result, setResult] = useState(0);
+  
 
   const handleChangeData = (e) => {
     setData({
@@ -37,6 +39,8 @@ const QuoterProvider = ({ children }) => {
 
     result = formatMoney(result); // Format Money
 
+    setResult(result)
+
   };
 
   return (
@@ -47,6 +51,7 @@ const QuoterProvider = ({ children }) => {
         error,
         setError,
         quoteInsurance,
+        result
       }}
     >
       {children}
