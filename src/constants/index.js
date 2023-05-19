@@ -12,5 +12,5 @@ export const YEARS = Array.from(
 
 export const PLANS = [
   { id: 1, name: "Basic" },
-  { id: 2, name: "Comprehensive" },
+  { id: 2, name: "Full" },
 ];
