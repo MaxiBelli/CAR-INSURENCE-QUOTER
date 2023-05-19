@@ -1,7 +1,8 @@
 import Form from "./Form";
+import Spinner from "./Spinner";
 import useQuoter from "../hooks/useQuoter";
 
-const { result } = useQuoter(result);
+const { result , loading } = useQuoter(result);
 
 const InsuranceApp = () => {
   return (
@@ -14,7 +15,7 @@ const InsuranceApp = () => {
 
       <main className="bg-white md:w-2/3 lg:w-2/4 mx-auto shadow rounded-lg p-10">
         <Form />
-        {result}
+        {loading ? <Spinner /> : result}
       </main>
     </>
   );
