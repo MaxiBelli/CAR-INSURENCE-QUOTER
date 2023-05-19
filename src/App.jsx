@@ -1,13 +1,10 @@
 import { QuoterProvider } from "./context/QuoterProvider";
-import InsuranceApp from "./components/InsuranceApp";
+import AppInsurance from "./components/AppInsurance";
 
 function App() {
   return (
-    <QuoterProvider
-    value={{
-      
-    }}>
-      <InsuranceApp />
+    <QuoterProvider>
+      <AppInsurance />
     </QuoterProvider>
   );
 }

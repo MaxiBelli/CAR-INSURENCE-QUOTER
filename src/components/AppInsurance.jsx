@@ -1,10 +1,12 @@
 import Form from "./Form";
 import Spinner from "./Spinner";
+import Result from "./Result";
 import useQuoter from "../hooks/useQuoter";
 
-const { result , loading } = useQuoter(result);
+const AppInsurance = () => {
 
-const InsuranceApp = () => {
+  const { loading } = useQuoter();
+  
   return (
     <>
       <header className="my-10">
@@ -15,10 +17,10 @@ const InsuranceApp = () => {
 
       <main className="bg-white md:w-2/3 lg:w-2/4 mx-auto shadow rounded-lg p-10">
         <Form />
-        {loading ? <Spinner /> : result}
+        {loading ? <Spinner /> : <Result />}
       </main>
     </>
   );
 };
 
-export default InsuranceApp;
+export default AppInsurance;

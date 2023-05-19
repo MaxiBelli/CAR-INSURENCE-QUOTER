@@ -45,8 +45,6 @@ const QuoterProvider = ({ children }) => {
       setResult(result);
       setLoading(false);
     }, 3000);
-  
-
   };
 
   return (
@@ -57,7 +55,8 @@ const QuoterProvider = ({ children }) => {
         error,
         setError,
         quoteInsurance,
-        result
+        result,
+        loading,
       }}
     >
       {children}
