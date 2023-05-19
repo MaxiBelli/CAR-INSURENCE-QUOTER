@@ -1,13 +1,26 @@
 import { Fragment } from "react";
 import { BRANDS, YEARS, PLANS } from "../constants";
 import useQuoter from "../hooks/useQuoter";
+import Error from "./Error";
 
 const Form = () => {
-  const { data, handleChangeData } = useQuoter();
+  const { data, handleChangeData, error, setError } = useQuoter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (Object.values(data).includes("")) {
+      setError("All fields are required");
+      return;
+    }
+
+    setError("");
+  };
 
   return (
     <>
-      <form>
+      {error && <Error />}
+      <form onSubmit={handleSubmit}>
         <div className="my-5">
           <label className="block mb-3 font-bold text-gray-400 uppercase">
             Brand
